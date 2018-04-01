@@ -20,17 +20,11 @@ public class Main {
         try (FileReader fileReader = new FileReader("config.json")) {
             AppConfig config = gson.fromJson(fileReader, AppConfig.class);
             Publisher publisher = new SlackPublisher(config);
-            scheduler.scheduleWithFixedDelay(new WotdTask(config, publisher), 10, 100, TimeUnit.SECONDS);
+            scheduler.scheduleWithFixedDelay(new WotdTask(config, publisher), 0, 1, TimeUnit.DAYS);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        //  WotdGetter getter = new SpanishWotdGetter();
-//        System.out.println(getter.getWotd());
-//        getter = new ItalianWotdGetter();
-//        System.out.println(getter.getWotd());
-
     }
 }
