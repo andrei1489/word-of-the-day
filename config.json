@@ -1,3 +1,26 @@
 {
-  "slackUrl":"https://hooks.slack.com/services/XXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
+  "slackUrl":"https://hooks.slack.com/services/XXXXXXXX/XXXXXXXXXX/XXXXXXXXXXXXXXXXX",
+  "getterList": [
+    {
+      "rssUrl": "http://feeds.feedblitz.com/spanish-word-of-the-day&x=1",
+      "language": "spanish"
+    },
+    {
+      "rssUrl": "http://feeds.feedblitz.com/italian-word-of-the-day&x=1",
+      "language": "italian"
+    },
+    {
+      "rssUrl": "http://feeds.feedblitz.com/french-word-of-the-day&x=1",
+      "language": "french"
+    },
+    {
+      "rssUrl": "http://feeds.feedblitz.com/russian-word-of-the-day&x=1",
+      "language": "russian"
+    },
+    {
+      "rssUrl": "http://feeds.feedblitz.com/swedish-word-of-the-day&x=1",
+      "language": "swedish"
+    }
+  ],
+  "message": "The %s message for the day is %s. It means %s."
 }
