@@ -5,7 +5,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import wotd.WotdGetters.RSSWotdGetter.FeedBlitzRSSWotdGetter;
-import wotd.WotdGetters.RSSWotdGetter.MiriamWebsterRssWotdGetter;
+import wotd.WotdGetters.RSSWotdGetter.MerriamWebsterRssWotdGetter;
 
 import java.lang.reflect.Type;
 
@@ -23,8 +23,8 @@ public class WotdGetterDeserializer implements JsonDeserializer<WotdGetter>{
                     getter = new FeedBlitzRSSWotdGetter(url, language);
                     break;
                 }
-                case "miriamwebster": {
-                    getter = new MiriamWebsterRssWotdGetter(url, language);
+                case "merriamwebster": {
+                    getter = new MerriamWebsterRssWotdGetter(url, language);
                     break;
                 }
             }

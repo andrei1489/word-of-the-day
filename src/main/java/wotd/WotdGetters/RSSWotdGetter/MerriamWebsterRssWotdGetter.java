@@ -12,11 +12,11 @@ import wotd.WotdGetters.WotdGetter;
 import java.net.URL;
 import java.util.List;
 
-public class MiriamWebsterRssWotdGetter implements WotdGetter{
+public class MerriamWebsterRssWotdGetter implements WotdGetter{
     private String rssUrl;
     private String language;
 
-    public MiriamWebsterRssWotdGetter(String rssUrl, String language) {
+    public MerriamWebsterRssWotdGetter(String rssUrl, String language) {
         this.rssUrl = rssUrl;
         this.language = language;
     }

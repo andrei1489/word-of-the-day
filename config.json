@@ -29,7 +29,7 @@
     {
       "rssUrl": "https://www.merriam-webster.com/wotd/feed/rss2",
       "language": "english",
-      "type": "miriamwebster"
+      "type": "merriamwebster"
     }
   ],
   "messageTemplate": "The %s word of the day is \"%s\". It means \"%s\".",
