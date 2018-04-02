@@ -1,13 +1,15 @@
 package wotd.Util;
 
-import wotd.WotdGetters.RSSWotdGetter.RSSWotdGetter;
+import wotd.WotdGetters.WotdGetter;
 
 import java.util.List;
 
 public class AppConfig {
     private String slackUrl;
-    private List<RSSWotdGetter> getterList;
-    private String message;
+    private List<WotdGetter> getterList;
+    private String messageTemplate;
+    private String exampleTemplate;
+    private boolean debugEnabled = false;
 
     public String getSlackUrl() {
         return slackUrl;
@@ -17,19 +19,35 @@ public class AppConfig {
         this.slackUrl = slackUrl;
     }
 
-    public List<RSSWotdGetter> getGetterList() {
+    public List<WotdGetter> getGetterList() {
         return getterList;
     }
 
-    public void setGetterList(List<RSSWotdGetter> getterList) {
+    public void setGetterList(List<WotdGetter> getterList) {
         this.getterList = getterList;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMessageTemplate() {
+        return messageTemplate;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMessageTemplate(String messageTemplate) {
+        this.messageTemplate = messageTemplate;
+    }
+
+    public boolean isDebugEnabled() {
+        return debugEnabled;
+    }
+
+    public void setDebugEnabled(boolean debugEnabled) {
+        this.debugEnabled = debugEnabled;
+    }
+
+    public String getExampleTemplate() {
+        return exampleTemplate;
+    }
+
+    public void setExampleTemplate(String exampleTemplate) {
+        this.exampleTemplate = exampleTemplate;
     }
 }

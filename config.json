@@ -3,24 +3,36 @@
   "getterList": [
     {
       "rssUrl": "http://feeds.feedblitz.com/spanish-word-of-the-day&x=1",
-      "language": "spanish"
+      "language": "spanish",
+      "type": "feedblitz"
     },
     {
       "rssUrl": "http://feeds.feedblitz.com/italian-word-of-the-day&x=1",
-      "language": "italian"
+      "language": "italian",
+      "type": "feedblitz"
     },
     {
       "rssUrl": "http://feeds.feedblitz.com/french-word-of-the-day&x=1",
-      "language": "french"
+      "language": "french",
+      "type": "feedblitz"
     },
     {
       "rssUrl": "http://feeds.feedblitz.com/russian-word-of-the-day&x=1",
-      "language": "russian"
+      "language": "russian",
+      "type": "feedblitz"
     },
     {
       "rssUrl": "http://feeds.feedblitz.com/swedish-word-of-the-day&x=1",
-      "language": "swedish"
+      "language": "swedish",
+      "type": "feedblitz"
+    },
+    {
+      "rssUrl": "https://www.merriam-webster.com/wotd/feed/rss2",
+      "language": "english",
+      "type": "miriamwebster"
     }
   ],
-  "message": "The %s word for the day is %s. It means %s."
+  "messageTemplate": "The %s word of the day is \"%s\". It means \"%s\".",
+  "exampleTemplate":"\n*Example sentence*: \"%s\"\n*Translated example sentence*: \"%s\"",
+  "debugEnabled": true
 }
