@@ -32,7 +32,8 @@
       "type": "merriamwebster"
     }
   ],
-  "messageTemplate": "The %s word of the day is \"%s\". It means \"%s\".",
-  "exampleTemplate":"\n*Example sentence*: \"%s\"\n*Translated example sentence*: \"%s\"",
+  "messageTemplate": "The %s word of the day is (%s)\"%s\". It means \"%s\".",
+  "exampleTemplate":"\n*Example sentence*: \"%s\"\n",
+  "exampleTranslatedTemplate":"*Translated example sentence*: \"%s\"",
   "debugEnabled": true
 }

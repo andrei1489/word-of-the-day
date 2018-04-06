@@ -9,6 +9,7 @@ public class AppConfig {
     private List<WotdGetter> getterList;
     private String messageTemplate;
     private String exampleTemplate;
+    private String exampleTranslatedTemplate;
     private boolean debugEnabled = false;
 
     public String getSlackUrl() {
@@ -49,5 +50,13 @@ public class AppConfig {
 
     public void setExampleTemplate(String exampleTemplate) {
         this.exampleTemplate = exampleTemplate;
+    }
+
+    public String getExampleTranslatedTemplate() {
+        return exampleTranslatedTemplate;
+    }
+
+    public void setExampleTranslatedTemplate(String exampleTranslatedTemplate) {
+        this.exampleTranslatedTemplate = exampleTranslatedTemplate;
     }
 }

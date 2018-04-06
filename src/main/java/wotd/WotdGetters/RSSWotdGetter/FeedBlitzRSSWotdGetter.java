@@ -15,7 +15,7 @@ import wotd.WotdGetters.WotdGetter;
 import java.io.IOException;
 import java.net.URL;
 
-public class FeedBlitzRSSWotdGetter implements WotdGetter{
+public class FeedBlitzRSSWotdGetter implements WotdGetter {
     private final String rssUrl;
     private final String language;
 
@@ -37,10 +37,10 @@ public class FeedBlitzRSSWotdGetter implements WotdGetter{
         String extraData = entry.getDescription().getValue();
         String[][] sentences = this.getSentences(extraData);
 
-        return new Wotd(data[0], data[1], this.language,sentences[1][0], sentences[2][0]);
+        return new Wotd(data[0], data[1], this.language,sentences[1][0], sentences[2][0], sentences[0][0]);
     }
 
-    private String[][] getSentences(String html){
+    private String[][] getSentences(String html) {
         Document doc = Jsoup.parse(html);
         Elements tables = doc.select("table");
         String[][] sentences = null;
