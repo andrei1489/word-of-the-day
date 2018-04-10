@@ -1,31 +1,32 @@
 package wotd.Util;
 
 import wotd.WotdGetters.WotdGetter;
+import wotd.WotdPublishers.WotdPublisher;
 
 import java.util.List;
 
 public class AppConfig {
-    private String slackUrl;
-    private List<WotdGetter> getterList;
+    private List<WotdPublisher> wotdPublisherList;
+    private List<WotdGetter> wotdGetterList;
     private String messageTemplate;
     private String exampleTemplate;
     private String exampleTranslatedTemplate;
     private boolean debugEnabled = false;
 
-    public String getSlackUrl() {
-        return slackUrl;
+    public List<WotdPublisher> getWotdPublisherList() {
+        return wotdPublisherList;
     }
 
-    public void setSlackUrl(String slackUrl) {
-        this.slackUrl = slackUrl;
+    public void setWotdPublisherList(List<WotdPublisher> wotdPublisherList) {
+        this.wotdPublisherList = wotdPublisherList;
     }
 
-    public List<WotdGetter> getGetterList() {
-        return getterList;
+    public List<WotdGetter> getWotdGetterList() {
+        return wotdGetterList;
     }
 
-    public void setGetterList(List<WotdGetter> getterList) {
-        this.getterList = getterList;
+    public void setWotdGetterList(List<WotdGetter> wotdGetterList) {
+        this.wotdGetterList = wotdGetterList;
     }
 
     public String getMessageTemplate() {

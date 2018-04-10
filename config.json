@@ -1,6 +1,16 @@
 {
-  "slackUrl":"https://hooks.slack.com/services/XXXXXXXX/XXXXXXXXXX/XXXXXXXXXXXXXXXXX",
-  "getterList": [
+  "wotdPublisherList": [
+    {
+      "url":"https://mattermost_hooks_url",
+      "type":"mattermost",
+      "username":"Word of the Day"
+    },
+    {
+      "url":"https://hooks.slack.com/services/XXXXX/XXXXXX/XXXXXXXXX",
+      "type":"slack"
+    }
+  ],
+  "wotdGetterList": [
     {
       "rssUrl": "http://feeds.feedblitz.com/spanish-word-of-the-day&x=1",
       "language": "spanish",
@@ -37,3 +47,4 @@
   "exampleTranslatedTemplate":"*Translated example sentence*: \"%s\"",
   "debugEnabled": true
 }
+

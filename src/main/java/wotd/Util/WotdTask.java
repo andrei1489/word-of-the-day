@@ -1,25 +1,24 @@
 package wotd.Util;
 
-import wotd.Util.AppConfig;
 import wotd.WotdGetters.WotdGetter;
-import wotd.WotdPublishers.Publisher;
+import wotd.WotdPublishers.WotdPublisher;
 
 public class WotdTask implements Runnable {
     private AppConfig config;
-    private Publisher publisher;
+    private WotdPublisher wotdPublisher;
 
-    public WotdTask(AppConfig config, Publisher publisher) {
+    public WotdTask(AppConfig config, WotdPublisher wotdPublisher) {
         this.config = config;
-        this.publisher = publisher;
+        this.wotdPublisher = wotdPublisher;
         System.out.println("Created Task");
     }
 
     @Override
     public void run() {
         System.out.println("Started Task");
-        for (WotdGetter getter: config.getGetterList()){
+        for (WotdGetter getter: config.getWotdGetterList()){
             try {
-                publisher.publishWotd(getter.getWotd());
+                wotdPublisher.publishWotd(getter.getWotd(), config);
             } catch (Exception e) {
                 System.out.println("Could not get wotd for " + getter.getLanguage());
             }
